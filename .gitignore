@@ -1,5 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
 build/
 dist/
 *.spec
 venv/
 output/
+
+# IDE
+.idea/
+.vscode/
+
+# Project specific
+video/*
+!video/.gitkeep
+installer/*
+!installer/.gitkeep
+ffmpeg-7.1-full_build/
+innosetup-6.4.3.exe
