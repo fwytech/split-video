@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a5568"/>
+    </marker>
+  </defs>
+  
+  <!-- 流程步骤 -->
+  <g fill="#fff" stroke="#4a5568" stroke-width="2">
+    <!-- 开始 -->
+    <rect x="50" y="150" width="120" height="60" rx="30" fill="#ebf8ff"/>
+    <!-- 选择视频 -->
+    <rect x="220" y="150" width="120" height="60" rx="8" fill="#e6fffa"/>
+    <!-- 导入切割点 -->
+    <rect x="390" y="150" width="120" height="60" rx="8" fill="#e6fffa"/>
+    <!-- 处理中 -->
+    <rect x="560" y="150" width="120" height="60" rx="8" fill="#e6fffa"/>
+    <!-- 完成 -->
+    <circle cx="740" cy="180" r="30" fill="#f0fff4"/>
+  </g>
+
+  <!-- 连接线 -->
+  <g stroke="#4a5568" stroke-width="2" marker-end="url(#arrowhead)">
+    <line x1="170" y1="180" x2="210" y2="180"/>
+    <line x1="340" y1="180" x2="380" y2="180"/>
+    <line x1="510" y1="180" x2="550" y2="180"/>
+    <line x1="680" y1="180" x2="700" y2="180"/>
+  </g>
+
+  <!-- 文字标签 -->
+  <g font-family="Arial" font-size="14" fill="#2d3748" text-anchor="middle">
+    <text x="110" y="185">开始</text>
+    <text x="280" y="175">选择视频文件</text>
+    <text x="280" y="195">支持拖放</text>
+    <text x="450" y="175">导入切割点</text>
+    <text x="450" y="195">多种格式支持</text>
+    <text x="620" y="175">智能处理中</text>
+    <text x="620" y="195">实时进度反馈</text>
+    <text x="740" y="185">完成</text>
+  </g>
+
+  <!-- 辅助提示 -->
+  <g font-family="Arial" font-size="12" fill="#718096">
+    <text x="280" y="120">支持MP4/AVI/MOV</text>
+    <text x="450" y="120">自动识别时间格式</text>
+    <text x="620" y="120">多线程加速</text>
+  </g>
+</svg>

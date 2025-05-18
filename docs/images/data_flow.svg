@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a5568"/>
+    </marker>
+  </defs>
+
+  <!-- 数据流容器 -->
+  <g fill="#fff" stroke="#4a5568" stroke-width="2">
+    <!-- 输入层 -->
+    <rect x="50" y="80" width="140" height="80" rx="8" fill="#ebf8ff"/>
+    <rect x="50" y="180" width="140" height="80" rx="8" fill="#ebf8ff"/>
+
+    <!-- 处理层 -->
+    <rect x="300" y="50" width="200" height="240" rx="8" fill="#e6fffa"/>
+    
+    <!-- 输出层 -->
+    <rect x="610" y="80" width="140" height="180" rx="8" fill="#f0fff4"/>
+  </g>
+
+  <!-- 处理步骤 -->
+  <g fill="#fff" stroke="#4a5568" stroke-width="1">
+    <!-- 处理层内部步骤 -->
+    <rect x="320" y="80" width="160" height="40" rx="4" fill="#b2f5ea"/>
+    <rect x="320" y="140" width="160" height="40" rx="4" fill="#b2f5ea"/>
+    <rect x="320" y="200" width="160" height="40" rx="4" fill="#b2f5ea"/>
+  </g>
+
+  <!-- 连接线 -->
+  <g stroke="#4a5568" stroke-width="2" marker-end="url(#arrowhead)">
+    <!-- 输入到处理 -->
+    <line x1="190" y1="120" x2="290" y2="120"/>
+    <line x1="190" y1="220" x2="290" y2="220"/>
+    <!-- 处理到输出 -->
+    <line x1="500" y1="170" x2="600" y2="170"/>
+  </g>
+
+  <!-- 文字标签 -->
+  <g font-family="Arial" font-size="14" fill="#2d3748">
+    <!-- 输入层标签 -->
+    <text x="120" y="110" text-anchor="middle">源视频文件</text>
+    <text x="120" y="130" text-anchor="middle">.mp4/.avi/.mov</text>
+    <text x="120" y="210" text-anchor="middle">切割点信息</text>
+    <text x="120" y="230" text-anchor="middle">时间戳+标题</text>
+
+    <!-- 处理层标签 -->
+    <text x="400" y="70" text-anchor="middle" font-weight="bold">视频处理引擎</text>
+    <text x="400" y="105" text-anchor="middle">时间格式解析</text>
+    <text x="400" y="165" text-anchor="middle">FFmpeg切割处理</text>
+    <text x="400" y="225" text-anchor="middle">音频降噪优化</text>
+
+    <!-- 输出层标签 -->
+    <text x="680" y="110" text-anchor="middle">输出片段</text>
+    <text x="680" y="135" text-anchor="middle">- 高质量编码</text>
+    <text x="680" y="160" text-anchor="middle">- 自动编号</text>
+    <text x="680" y="185" text-anchor="middle">- 智能命名</text>
+    <text x="680" y="210" text-anchor="middle">- 降噪处理</text>
+  </g>
+
+  <!-- 技术说明 -->
+  <g font-family="Arial" font-size="12" fill="#718096">
+    <text x="400" y="320" text-anchor="middle">多线程并行处理 | 实时进度反馈 | 智能异常处理</text>
+  </g>
+</svg>
