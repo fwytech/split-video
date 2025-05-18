@@ -196,8 +196,11 @@ class VideoProcessThread(QThread):
 class VideoSplitterApp(QMainWindow):
     def __init__(self):
         super().__init__()
-        # 设置默认路径
-        self.default_video_dir = os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])), 'video')
+        # 设置默认路径为用户的视频目录
+        self.default_video_dir = os.path.expanduser('~/Videos')
+        if not os.path.exists(self.default_video_dir):
+            # 如果用户视频目录不存在，则使用当前目录
+            self.default_video_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
         self.default_cut_points_file = os.path.join(self.default_video_dir, '视频切割点.txt')
         self.default_output_dir = os.path.join(self.default_video_dir, 'output')
         

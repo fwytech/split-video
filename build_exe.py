@@ -7,10 +7,6 @@ def build_exe():
     script_dir = os.path.dirname(os.path.abspath(__file__))
     os.chdir(script_dir)
     
-    # 确保video目录存在
-    video_dir = os.path.join(script_dir, 'video')
-    if not os.path.exists(video_dir):
-        os.makedirs(video_dir)
     
     # PyInstaller参数
     params = [
